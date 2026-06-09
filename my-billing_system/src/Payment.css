@@ -1,0 +1,272 @@
+/* ==========================
+   PAYMENT PAGE
+========================== */
+
+.payment-page {
+  padding: 20px;
+  background: #cbd5e1;
+  min-height: 100vh;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.payment-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.payment-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 5px;
+}
+
+.payment-header p {
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* ==========================
+   KPI CARDS
+========================== */
+
+.payment-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.payment-kpi-card {
+  background: rgb(207, 194, 194);
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  border-left: 5px solid #2563eb;
+}
+
+.payment-kpi-card:hover {
+  transform: translateY(-4px);
+}
+
+.payment-kpi-card h3 {
+  color: #db2075;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.payment-kpi-card h2 {
+  color: #0f172a;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.payment-card {
+  background: rgba(184, 184, 214, 0.511);
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.payment-card h2 {
+  color: #0f172a;
+  margin-bottom: 15px;
+}
+
+/* ==========================
+   FORM
+========================== */
+
+.payment-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.payment-form-grid input,
+.payment-form-grid select {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.payment-form-grid input:focus,
+.payment-form-grid select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+.save-payment-btn {
+  grid-column: span 2;
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-payment-btn:hover {
+  background: #15803d;
+}
+
+/* ==========================
+   SEARCH
+========================== */
+
+.search-box {
+  padding: 12px;
+  width: 320px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.search-box:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* ==========================
+   TABLE
+========================== */
+
+.payment-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.payment-table thead {
+  background: #1e293b;
+  color: white;
+}
+
+.payment-table th {
+  padding: 10px;
+  text-align: left;
+  font-size: 15px;
+  text-align: center;
+}
+
+.payment-table td {
+  padding: 14px;
+  border-bottom: 1px solid rgba(148,163,184,0.25);
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.payment-table tbody tr {
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.payment-table tbody tr:hover {
+  background: rgba(37,99,235,0.08);
+  transform: scale(1.002);
+}
+
+/* ==========================
+   STATUS BADGES
+========================== */
+
+.status-paid {
+  background: #dcfce7;
+  color: #15803d;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-pending {
+  background: #fef3c7;
+  color: #d97706;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-failed {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ==========================
+   TABLE WRAPPER
+========================== */
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 1024px) {
+
+  .payment-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .payment-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .save-payment-btn {
+    grid-column: span 1;
+  }
+
+  .search-box {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+}
+.payment-table-wrapper {
+  max-height: 320px;   /* shows ~5-6 rows */
+  overflow-y: auto;    /* vertical scroll */
+  overflow-x: auto;    /* horizontal scroll if needed */
+  border-radius: 10px;
+}
+.payment-table thead th {
+  position: sticky;
+  top: 0;
+  background: #1e293b;
+  z-index: 2;
+}
+.payment-table th,
+.payment-table td {
+  padding: 10px;
+  font-size: 13px;
+  text-align: center;
+  white-space: nowrap;
+}

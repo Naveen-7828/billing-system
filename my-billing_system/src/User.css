@@ -1,0 +1,216 @@
+.users-page{
+  padding:15px;
+  background:#bfcfdf;
+  min-height:100vh;
+}
+
+.users-header{
+  margin-bottom:25px;
+  text-align:center;
+}
+
+.users-header h1{
+  font-size:28px;
+  color:#0f172a;
+  margin-bottom:8px;
+}
+
+.users-header p{
+  color:#64748b;
+  font-size:13px;
+}
+
+.users-kpi-grid{
+  display:grid;
+  grid-template-columns:250px;
+  gap:15px;
+  margin-bottom:20px;
+}z
+
+.users-kpi-card{
+  background:white;
+  border-radius:16px;
+  padding:20px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+  border-left:5px solid #2563eb;
+}
+
+.users-kpi-card h3{
+  color:#64748b;
+  margin-bottom:10px;
+}
+
+.users-kpi-card h2{
+  font-size:20px;
+  color:#0f172a;
+}
+
+.users-card{
+  background:white;
+  padding:10px;
+  border-radius:16px;
+  margin-bottom:20px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.users-form-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.users-form-grid input,
+.users-form-grid select{
+  padding:10px;
+  border:1px solid #cbd5e1;
+  border-radius:10px;
+}
+
+.users-form-grid input:focus,
+.users-form-grid select:focus{
+  outline:none;
+  border-color:#2563eb;
+}
+
+.save-user-btn{
+  grid-column:span 2;
+  background:#16a34a;
+  color:white;
+  border:none;
+  padding:12px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+  font-size:13px;
+}
+
+.save-user-btn:hover{
+  background:#15803d;
+}
+
+.table-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+  color:#1e293b;
+}
+
+.search-box{
+  width:300px;
+  padding:12px;
+  border:1px solid #cbd5e1;
+  border-radius:10px;
+}
+
+.users-table{
+  width:100%;
+  border-collapse:collapse;
+  color:#1e293b;
+}
+
+.users-table thead{
+  background:#1e293b;
+  color:white;
+}
+
+.users-table th,
+.users-table td{
+  padding:15px;
+  text-align:left;
+}
+
+.users-table tbody tr{
+  border-bottom:1px solid #e2e8f0;
+}
+
+.users-table tbody tr:hover{
+  background:#f8fafc;
+}
+
+.role-badge{
+  padding:6px 12px;
+  border-radius:30px;
+  font-size:12px;
+  font-weight:600;
+}
+
+.role-admin{
+  background:#fee2e2;
+  color:#dc2626;
+}
+
+.role-manager{
+  background:#dbeafe;
+  color:#2563eb;
+}
+
+.role-cashier{
+  background:#dcfce7;
+  color:#16a34a;
+}
+
+.role-accountant{
+  background:#fef3c7;
+  color:#d97706;
+}
+
+.role-user{
+  background:#e2e8f0;
+  color:#334155;
+}
+
+.delete-user-btn{
+  background:#dc2626;
+  color:white;
+  border:none;
+  padding:8px 14px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.delete-user-btn:hover{
+  background:#b91c1c;
+}
+
+.table-wrapper{
+  overflow-x:auto;
+}
+
+@media(max-width:768px){
+
+  .users-form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .save-user-btn{
+    grid-column:span 1;
+  }
+
+  .table-header{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .search-box{
+    width:100%;
+  }
+}
+.action-btns{
+  display:flex;
+  gap:10px;   /* 👈 space between buttons */
+}
+
+.edit-btn{
+  background:#1824ce;
+  color:white;
+  border:none;
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:13px;
+}
+
+.edit-btn:hover{
+  background:#2563eb;
+}

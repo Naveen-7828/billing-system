@@ -1,0 +1,211 @@
+/* ==========================
+   SIDEBAR
+========================== */
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+
+    background: linear-gradient(
+        180deg,
+        #0606036f 0%,
+        #434b5e 40%,
+        #23231c8e 100%
+    );
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    position: sticky;
+    top: 0;
+
+    box-shadow: 6px 0 25px rgba(0,0,0,0.25);
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.sidebar-header {
+    text-align: center;
+    padding: 20px 15px;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+
+    background: linear-gradient(
+        90deg,
+        #38bdf8,
+        #60a5fa
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sidebar-header p {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* ==========================
+   DIVIDER
+========================== */
+
+.sidebar-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+    margin: 0 15px;
+}
+
+/* ==========================
+   MENU
+========================== */
+
+.sidebar-menu {
+    list-style: none;
+    padding: 15px 12px;
+    margin: 0;
+    flex: 1;
+}
+
+.sidebar-menu li {
+    margin-bottom: 8px;
+}
+
+/* ==========================
+   MENU LINKS
+========================== */
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 16px;
+
+    text-decoration: none;
+    color: #e2e8f0;
+
+    border-radius: 12px;
+
+    transition: all 0.25s ease;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    position: relative;
+}
+
+.sidebar-link span {
+    font-size: 18px;
+    width: 22px;
+    text-align: center;
+}
+
+/* Hover */
+
+.sidebar-link:hover {
+    background: rgba(56,189,248,0.12);
+
+    color: #38bdf8;
+
+    transform: translateX(6px);
+
+    box-shadow:
+        inset 4px 0 0 #38bdf8;
+}
+
+/* Active Page */
+
+.sidebar-link.active {
+    background: linear-gradient(
+        90deg,
+        rgba(56,189,248,0.20),
+        rgba(59,130,246,0.08)
+    );
+
+    color: #38bdf8;
+
+    box-shadow:
+        inset 4px 0 0 #38bdf8;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.sidebar-footer {
+    padding: 18px;
+    text-align: center;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.sidebar-footer p {
+    margin: 0;
+
+    font-size: 11px;
+
+    color: #94a3b8;
+
+    line-height: 1.5;
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .sidebar-header h2 {
+        font-size: 22px;
+    }
+
+    .sidebar-link {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+.logout-btn{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:#ef4444;
+  color:white;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.logout-btn:hover{
+  background:#dc2626;
+}
