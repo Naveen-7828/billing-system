@@ -22,7 +22,7 @@ function Login() {
 
     if (user) {
       navigate("/");
-      
+
     }
 
   }, [navigate]);
@@ -37,31 +37,23 @@ function Login() {
   };
 
   const handleLogin = async (e) => {
+  e.preventDefault();
 
-    e.preventDefault();
+  try {
+    const res = await axios.post(
+      `${import.meta.env.VITE_API_URL}/api/users/login`,
+      form
+    );
 
-    try {
-
-      const res = await axios.post(
-        "http://localhost:8080/api/users/login",
-        form
-      );
-
-      localStorage.setItem(
-  "user",
-  JSON.stringify(res.data)
-);
-
-window.location.href = "/";
-    } catch (err) {
-
-      setError(
-        err.response?.data?.message ||
-        "Invalid Username or Password"
-      );
-
-    }
-  };
+    localStorage.setItem("user", JSON.stringify(res.data));
+    window.location.href = "/";
+  } catch (err) {
+    setError(
+      err.response?.data?.message ||
+      "Invalid Username or Password"
+    );
+  }
+};
 
   return (
     <div className="login-container">
