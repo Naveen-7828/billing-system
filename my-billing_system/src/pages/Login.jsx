@@ -22,6 +22,7 @@ function Login() {
 
     if (user) {
       navigate("/");
+      
     }
 
   }, [navigate]);
