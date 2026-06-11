@@ -3,11 +3,13 @@
 ================================== */
 
 .customer-content {
-  padding: 15px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 20px;
   background: #c8daed;
   min-height: 100vh;
-  max-width: 920px;
-  margin: auto;
+  box-sizing: border-box;
 }
 
 /* ===============================
@@ -293,17 +295,14 @@
   width: 100%;
   max-width: 1100px;   /* 👈 makes UI compact */
 }
-.customer-content {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 15px;
-  box-sizing: border-box;
-}
 
 .customer-card {
   width: 100%;
   box-sizing: border-box;
+}
+
+.customer-kpi-grid {
+  width: 100%;
 }
 
 .table-container {
@@ -313,7 +312,6 @@
 
 .modern-table {
   width: 100%;
-  table-layout: fixed;
 }
 
 .modern-table th,
