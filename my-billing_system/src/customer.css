@@ -293,3 +293,38 @@
   width: 100%;
   max-width: 1100px;   /* 👈 makes UI compact */
 }
+.customer-content {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.customer-card {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.modern-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.modern-table th,
+.modern-table td {
+  padding: 8px;
+  font-size: 12px;
+  word-wrap: break-word;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+}

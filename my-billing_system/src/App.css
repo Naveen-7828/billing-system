@@ -182,3 +182,25 @@
     border-right-color: var(--border);
   }
 }
+
+/* add in App.css or index.css */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.main-content,
+.dashboard-container,
+.customer-content,
+.invoice-page,
+.payment-page,
+.users-page,
+.billing-wrapper {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
