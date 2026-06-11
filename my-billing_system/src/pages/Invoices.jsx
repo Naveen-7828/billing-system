@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "../Invoice.css";
 import axios from "axios";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function Invoices() {
 
@@ -21,12 +22,12 @@ useEffect(() => {
 
 
 axios
-  .get("http://localhost:8080/api/customer")
+  .get(`${API_URL}/api/customer`)
   .then((res) => setCustomers(res.data))
   .catch((err) => console.log(err));
 
 axios
-  .get("http://localhost:8080/api/product")
+  .get(`${API_URL}/api/product`)
   .then((res) => setProducts(res.data))
   .catch((err) => console.log(err));
 
@@ -36,7 +37,7 @@ loadInvoices();
 
 const loadInvoices = () => {
   axios
-    .get("http://localhost:8080/api/invoices")
+    .get(`${API_URL}/api/invoices`)
     .then((res) => {
       console.log("Invoices:", res.data);
       setInvoices(res.data);
@@ -81,7 +82,7 @@ const payload = {
 };
 
 axios
-  .post("http://localhost:8080/api/invoices", payload)
+  .post(`${API_URL}/api/invoices`, payload)
   .then(() => {
 
     loadInvoices();

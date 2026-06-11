@@ -19,15 +19,15 @@ function Dashboard() {
     }, []);
 
     const fetchDashboard = () => {
-        axios
-            .get(`http://localhost:8080/api/dashboard?ts=${Date.now()}`)
-            .then((res) => {
-                setDashboard(res.data);
-            })
-            .catch((err) => {
-                console.error(err);
-            });
-    };
+    axios
+        .get(`${import.meta.env.VITE_API_URL}/api/dashboard?ts=${Date.now()}`)
+        .then((res) => {
+            setDashboard(res.data);
+        })
+        .catch((err) => {
+            console.error(err);
+        });
+};
 
     return (
         <div className="dashboard-container">

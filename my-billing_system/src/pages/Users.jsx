@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "../User.css";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 function Users() {
 
   const [users, setUsers] = useState([]);
@@ -22,7 +24,7 @@ function Users() {
   }, []);
 
   const loadUsers = () => {
-    axios.get("http://localhost:8080/api/users")
+    axios.get(`${API_URL}/api/users`)
       .then(res => setUsers(res.data))
       .catch(err => console.log(err));
   };
@@ -41,7 +43,7 @@ function Users() {
     if (editId) {
 
       // UPDATE USER
-      axios.put(`http://localhost:8080/api/users/${editId}`, form)
+      axios.put(`${API_URL}/api/users/${editId}`, form)
         .then(() => {
           loadUsers();
           resetForm();
@@ -51,7 +53,7 @@ function Users() {
     } else {
 
       // CREATE USER
-      axios.post("http://localhost:8080/api/users", form)
+      axios.post(`${API_URL}/api/users`, form)
         .then(() => {
           loadUsers();
           resetForm();
@@ -74,7 +76,7 @@ function Users() {
 
   const handleDelete = (id) => {
     if (window.confirm("Delete User?")) {
-      axios.delete(`http://localhost:8080/api/users/${id}`)
+      axios.delete(`${API_URL}/api/users/${id}`)
         .then(() => loadUsers())
         .catch(err => console.log(err));
     }

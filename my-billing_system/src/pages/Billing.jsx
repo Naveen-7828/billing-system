@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "../billing.css";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 function Billing() {
 
   // ================= STATE =================
@@ -40,8 +42,14 @@ const [paymentStatus, setPaymentStatus] = useState("");
 
   // ================= LOAD =================
   useEffect(() => {
-    axios.get("http://localhost:8080/api/customer");
-    axios.get("http://localhost:8080/api/product");
+    axios
+    .get(`${API_URL}/api/customer`)
+    .catch((err) => console.log(err));
+
+  axios
+    .get(`${API_URL}/api/product`)
+    .catch((err) => console.log(err));
+
   }, []);
 
   // ================= CUSTOMER SEARCH =================
@@ -53,10 +61,11 @@ const [paymentStatus, setPaymentStatus] = useState("");
       return;
     }
 
-    const res = await axios.get(
-      `http://localhost:8080/api/customer/search?keyword=${keyword}`
-    );
+    const API_URL = import.meta.env.VITE_API_URL;
 
+const res = await axios.get(
+  `${API_URL}/api/customer/search?keyword=${keyword}`
+);
     setCustomerResults(res.data);
   };
 
@@ -68,8 +77,8 @@ const [paymentStatus, setPaymentStatus] = useState("");
     }
 
     const res = await axios.get(
-      `http://localhost:8080/api/product/search?keyword=${keyword}`
-    );
+  `${API_URL}/api/product/search?keyword=${keyword}`
+);
 
     setProductResultsMap(prev => ({
       ...prev,
@@ -127,10 +136,10 @@ const [paymentStatus, setPaymentStatus] = useState("");
       paymentStatus
     };
 
-    const res = await axios.post(
-      "http://localhost:8080/api/billing/generate",
-      payload
-    );
+   const res = await axios.post(
+  `${API_URL}/api/billing/generate`,
+  payload
+);
 
     setBillResponse(res.data);
 
@@ -482,7 +491,7 @@ updated[index].price = p.sellingPrice;
           <p>Total: ₹{billResponse.totalAmount}</p>
 
           <a
-            href={`http://localhost:8080/api/invoices/${billResponse.invoiceId}/pdf`}
+            href={`${API_URL}/api/invoices/${billResponse.invoiceId}/pdf`}
             target="_blank"
           >
             Download PDF
