@@ -298,7 +298,30 @@
 }
 
 .invoice-page {
-  max-width: 1100px;
   width: 100%;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
+  padding: 15px;
+  background: #cbd5e1;
+  color: #000003;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.invoice-card {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.invoice-table-wrapper {
+  width: 100%;
+  max-height: 220px;
+  overflow-y: auto;
+  overflow-x: auto;
+  border-radius: 10px;
+}
+
+.invoice-history,
+.product-table {
+  width: 100%;
 }
