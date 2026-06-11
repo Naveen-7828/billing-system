@@ -3,7 +3,7 @@
 .invoice-page {
   padding: 15px;
   background: #cbd5e1;
-  max-width: 1100px;
+  max-width: none;
   color: #000003;
   margin: auto;
 }
