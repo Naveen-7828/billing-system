@@ -29,7 +29,7 @@ function Sidebar() {
       path: "/billing",
       label: "Billing",
       icon: "🧾",
-      roles: ["ADMIN", "CASHIER"]
+      roles: ["ADMIN", "MANAGER", "CASHIER"]
     },
     {
       path: "/invoices",
